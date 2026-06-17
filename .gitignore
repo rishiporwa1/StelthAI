@@ -1,0 +1,104 @@
+# ============================================
+# OS-specific files
+# ============================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+*.tmp
+*.swp
+*~
+
+# ============================================
+# IDE and Editor configuration
+# ============================================
+.idea/
+.vscode/
+*.code-workspace
+*.sublime-workspace
+.project
+.pydevproject
+.settings/
+
+# ============================================
+# Python-specific
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ============================================
+# Django-specific
+# ============================================
+*.sqlite3
+*.db
+db.sqlite3
+/media
+/staticfiles
+.env.local
+local_settings.py
+
+# ============================================
+# Virtual environments
+# ============================================
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# ============================================
+# Node/Frontend-specific
+# ============================================
+node_modules/
+dist/
+.next/
+out/
+.nuxt/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.pnp
+.pnp.js
+
+# ============================================
+# Logs
+# ============================================
+*.log
+logs/
+*.log.*
+
+# ============================================
+# OS and miscellaneous
+# ============================================
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+*.vsix
