@@ -1,0 +1,91 @@
+.page { min-height: 100vh; }
+.container { max-width: 1100px; margin: 0 auto; }
+.center { display:flex; justify-content:center; padding:3rem 0; }
+
+.hero { padding:8rem 4rem 4rem; background:transparent; position:relative; }
+.heroBg { display: none; }
+.hero .container { position:relative; z-index:1; }
+
+.body { padding:4rem; }
+
+.jobList { display:flex; flex-direction:column; gap:1.25rem; margin-bottom:3rem; }
+
+
+.jobTop { display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; margin-bottom:0.75rem; }
+.jobTitle { font-size:1.1rem; font-weight:700; margin-bottom:0.5rem; }
+.jobMeta { display:flex; align-items:center; gap:0.75rem; }
+.location { font-size:0.82rem; color:var(--muted); }
+.desc { font-size:0.9rem; color:var(--muted); margin-bottom:0.75rem; }
+.toggle { font-size:0.8rem; color:var(--accent); background:none; border:none; cursor:pointer; padding:0; }
+.requirements { font-size:0.875rem; color:var(--muted); margin-top:0.75rem; padding:1rem; background:rgba(20,20,31,0.6); backdrop-filter:blur(8px); border-radius:8px; }
+
+[data-theme="light"] .requirements {
+  background:#ffffff;
+  border:1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.applyBtn {
+  padding:0.55rem 1.25rem; white-space:nowrap;
+  background:var(--accent); color:#fff; border:none; border-radius:8px;
+  font-family:var(--font-display); font-weight:700; font-size:0.85rem;
+  cursor:pointer; transition:all 0.2s; flex-shrink:0;
+}
+.applyBtn:hover { opacity:0.85; transform:translateY(-1px); }
+
+.generalCta {
+  padding:2.5rem; text-align:center;
+  background:rgba(15,15,26,0.5); backdrop-filter:blur(12px);
+  border:1px solid var(--border); border-radius:16px;
+}
+
+[data-theme="light"] .generalCta {
+  background:#ffffff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.generalCta h3 { font-size:1.3rem; margin-bottom:0.5rem; }
+.generalCta p  { color:var(--muted); margin-bottom:1.5rem; }
+
+.btnPrimary { padding:0.75rem 1.75rem; background:var(--accent); color:#fff; border:none; border-radius:8px; font-family:var(--font-display); font-weight:700; font-size:0.9rem; cursor:pointer; transition:all 0.2s; }
+.btnPrimary:hover { opacity:0.85; }
+.btnPrimary:disabled { opacity:0.5; cursor:not-allowed; }
+.btnOutline { padding:0.75rem 1.75rem; background:transparent; color:var(--text); border:1px solid var(--border); border-radius:8px; font-family:var(--font-display); font-weight:600; font-size:0.9rem; cursor:pointer; transition:all 0.2s; }
+.btnOutline:hover { border-color:var(--accent); color:var(--accent); }
+
+.overlay { position:fixed; inset:0; z-index:200; background:rgba(0,0,0,0.75); backdrop-filter:blur(6px); display:flex; align-items:center; justify-content:center; padding:1.5rem; }
+.modal { background:rgba(15,15,26,0.9); backdrop-filter:blur(20px); border:1px solid var(--border); border-radius:20px; padding:2.5rem; width:100%; max-width:560px; position:relative; max-height:90vh; overflow-y:auto; }
+
+[data-theme="light"] .modal {
+  background:#ffffff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+.close { position:absolute; top:1.25rem; right:1.25rem; background:none; border:none; color:var(--muted); font-size:1.1rem; cursor:pointer; transition:color 0.2s; }
+.close:hover { color:var(--text); }
+.modalTitle { font-size:1.4rem; font-weight:800; margin-bottom:1.5rem; }
+.modalForm { display:flex; flex-direction:column; gap:1rem; }
+.row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.fileInput { background:rgba(20,20,31,0.7); border:1px solid var(--border); border-radius:8px; padding:0.65rem 1rem; color:var(--muted); font-size:0.85rem; width:100%; cursor:pointer; }
+
+[data-theme="light"] .fileInput {
+  background:#f8f9fa;
+  color:var(--text);
+}
+.apiError { font-size:0.85rem; color:var(--accent2); }
+.successBox { text-align:center; padding:2rem 0; }
+.successIcon { width:64px; height:64px; border-radius:50%; background:rgba(0,212,170,0.15); color:var(--accent3); font-size:1.8rem; display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; }
+.successBox h3 { font-size:1.4rem; margin-bottom:0.5rem; }
+.successBox p  { color:var(--muted); margin-bottom:1.5rem; }
+
+@media (max-width:768px) {
+  .hero { padding:7rem 1.5rem 3rem; }
+  .body { padding:3rem 1.5rem; }
+  .row  { grid-template-columns:1fr; }
+  .jobTop { flex-direction:column; }
+}
+
+@media (max-width:480px) {
+  .hero { padding:6rem 1rem 2rem; }
+  .body { padding:2rem 1rem; }
+  .modal { padding: 1.5rem; margin: 1rem; }
+  .jobMeta { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+}

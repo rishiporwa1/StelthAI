@@ -1,0 +1,88 @@
+.page { min-height:100vh; padding:7rem 4rem 4rem; }
+.container { max-width:900px; margin:0 auto; }
+.center { display:flex; justify-content:center; align-items:center; min-height:60vh; }
+
+.header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:2rem; flex-wrap:wrap; gap:1rem; }
+.title  { font-size:2rem; font-weight:800; margin-bottom:0.3rem; }
+.sub    { color:var(--muted); }
+
+.headerActions { display:flex; gap:0.75rem; }
+.btnOutline {
+  padding:0.6rem 1.25rem; background:transparent; color:var(--text);
+  border:1px solid var(--border); border-radius:8px;
+  font-family:var(--font-display); font-weight:600; font-size:0.85rem;
+  cursor:pointer; transition:all 0.2s;
+}
+.btnOutline:hover { border-color:var(--accent); color:var(--accent); }
+
+.profileCard { display:flex; align-items:center; gap:1.5rem; margin-bottom:2rem; }
+.profileAvatar {
+  width:60px; height:60px; border-radius:50%;
+  background:rgba(108,99,255,0.15); color:var(--accent);
+  font-family:var(--font-display); font-size:1.5rem; font-weight:800;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.profileName { font-size:1.2rem; font-weight:700; margin-bottom:0.2rem; }
+.profileMeta { font-size:0.85rem; color:var(--muted); }
+.adminBadge {
+  display:inline-block; margin-top:0.4rem;
+  padding:0.15rem 0.6rem; background:rgba(108,99,255,0.12);
+  color:var(--accent); border:1px solid rgba(108,99,255,0.2);
+  border-radius:4px; font-size:0.72rem; font-weight:700; text-transform:uppercase;
+}
+
+.section { margin-bottom:2.5rem; }
+.sectionTitle { font-size:1rem; font-weight:700; margin-bottom:1.25rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; }
+.muted { color:var(--muted); }
+
+.statsGrid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+.statBox {
+  padding:1.5rem; border-radius:12px; border:1px solid var(--border);
+}
+.statBox_accent { background:rgba(108,99,255,0.06); border-color:rgba(108,99,255,0.15); }
+.statBox_teal   { background:rgba(0,212,170,0.05);   border-color:rgba(0,212,170,0.15); }
+.statBox_red    { background:rgba(255,107,107,0.05); border-color:rgba(255,107,107,0.15); }
+
+[data-theme="light"] .statBox {
+  background:#ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+[data-theme="light"] .statBox_accent { border-color:rgba(108,99,255,0.2); }
+[data-theme="light"] .statBox_teal   { border-color:rgba(0,212,170,0.2); }
+[data-theme="light"] .statBox_red    { border-color:rgba(255,107,107,0.2); }
+.statValue { font-family:var(--font-display); font-size:2.2rem; font-weight:800; }
+.statLabel { font-size:0.82rem; color:var(--muted); margin-top:0.2rem; }
+.statSub   { font-size:0.75rem; color:var(--muted); opacity:0.7; margin-top:0.1rem; }
+
+.adminLinks { margin-top:1rem; }
+.adminLink {
+  font-size:0.9rem; color:var(--accent); font-weight:600;
+  transition:opacity 0.2s;
+}
+.adminLink:hover { opacity:0.75; }
+
+.quickGrid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+.quickCard {
+  display:flex; flex-direction:column; align-items:center; gap:0.6rem;
+  padding:1.5rem 1rem; text-align:center;
+  background:var(--card); border:1px solid var(--border); border-radius:12px;
+  transition:all 0.2s; text-decoration:none; color:var(--text);
+  font-size:0.9rem; font-weight:500;
+}
+.quickCard:hover { border-color:var(--accent); transform:translateY(-2px); }
+
+[data-theme="light"] .quickCard {
+  background:#ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+[data-theme="light"] .quickCard:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.quickIcon { font-size:1.5rem; }
+
+@media (max-width:768px) {
+  .page { padding:6rem 1.5rem 3rem; }
+  .statsGrid  { grid-template-columns:1fr 1fr; }
+  .quickGrid  { grid-template-columns:1fr 1fr; }
+  .profileCard{ flex-direction:column; text-align:center; }
+}

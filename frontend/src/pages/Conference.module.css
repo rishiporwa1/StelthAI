@@ -1,0 +1,69 @@
+.container {
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  transition: background 0.3s, border 0.3s;
+}
+
+[data-theme="light"] .card {
+  background: #ffffff;
+  border-color: rgba(0,0,0,0.12);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.card p {
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 2.2rem; }
+  .subtitle { font-size: 1rem; }
+  .hero { padding: 3rem 1.5rem; }
+  .content { padding: 1.5rem; }
+  .card { padding: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .title { font-size: 1.8rem; }
+  .hero { padding: 2rem 1rem; }
+  .content { padding: 1rem; }
+}

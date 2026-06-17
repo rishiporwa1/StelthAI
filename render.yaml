@@ -1,0 +1,28 @@
+databases:
+  - name: technova-db
+    databaseName: technova
+    user: technova
+
+services:
+  - type: web
+    name: technova-api
+    env: python
+    buildCommand: "./backend/build.sh"
+    startCommand: "cd backend && gunicorn technova.wsgi:application --bind 0.0.0.0:$PORT"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: technova-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: CORS_ALLOWED_ORIGINS
+        value: "http://localhost:5173,http://localhost:3000,https://YOUR_VERCEL_FRONTEND_URL.vercel.app" # UPDATE THIS
+      - key: EMAIL_BACKEND
+        value: "django.core.mail.backends.smtp.EmailBackend"
+      - key: EMAIL_HOST_USER
+        sync: false
+      - key: EMAIL_HOST_PASSWORD
+        sync: false
